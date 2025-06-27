@@ -6,7 +6,7 @@ export const isAuthenticated = async (req, res, next) => {
   try {
     const { ecommerce } = req.cookies;
 
-    if (!ecommerce) return next(new ErrorHandler(`Login First`, 401));
+    if (!ecommerce) return next(new ErrorHandler(`Login First bro`, 401));
 
     const decoded = jwt.verify(ecommerce, process.env.JWT_SECRET);
 
